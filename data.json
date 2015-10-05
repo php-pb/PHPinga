@@ -1,0 +1,8 @@
+{
+  "perguntas": [
+    {
+      "pergunta": "Qual das funcões pode ser usada para verificar se um número é inteiro?",
+      "alternativas": ["int", "is_interger", "is_int", "isInt", "isInteger"]
+    }
+  ]
+}
