@@ -15,12 +15,8 @@ Para contribuir com perguntas e respostas basta fazer um fork e inserir suas per
 
 ### Rodando o app localmente
 
-Instale o `http-server`:
+Rode o seguinte comando no terminal:
 
-    npm install -g http-server
+    python -m SimpleHTTPServer
 
-E rode na pasta do projeto:
-
-    npm install -p 5000 ./
-
-Acesse [localhost:5000](http://localhost:5000).
+Acesse [localhost:8000](http://localhost:8000).
