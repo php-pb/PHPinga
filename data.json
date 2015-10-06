@@ -12,7 +12,7 @@
     },
     {
       "pergunta": "Utilizando banco de dados MySQL, qual a função para enviar uma consulta SQL ao banco de dados ativo?",
-      "alternativas": ["mysql_fetch_array()", "mysql_stmt_start()", "mysql_fetch_array()", "mysql_query()"],
+      "alternativas": ["mysql_free_result()", "mysql_stmt_start()", "mysql_fetch_array()", "mysql_query()"],
       "correta": 3
     }
   ]
