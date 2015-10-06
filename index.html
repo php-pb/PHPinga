@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt" ng-app="Pinga">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PHPinga</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="app col-md-6 col-md-offset-3" ng-controller="MainController">
+
+          <div class="welcome" ng-show="state == 'welcome'">
+            <img style="width:80%" class="center-block" src="phpinga.png" alt="PHPinga">
+            <h1 class="text-center">PHPinga</h1>
+            <p class="text-center">
+              Cada um na mesa deve responder a uma pergunta sobre PHP.
+              Caso acerte, pode escolher uma pessoa pra beber, caso erre tem de beber.
+              Ao terminar, passa-se para o jogador da esquerda.
+            </p>
+            <button style="width:100%; margin-top:50px" ng-click="letTheGameBegin()" class="center-block btn btn-lg btn-primary">Começar</button>
+          </div>
+
+          <div class="wrong" ng-show="state == 'wrong'">
+            <img style="width:80%" class="center-block" src="phpinga.png" alt="PHPinga">
+            <h1 class="text-center">Bebe!</h1>
+            <p class="text-center">
+              Você errou! Agora tem de beber e passar a vez pra a pessoa à sua esquerda.
+            </p>
+            <button style="width:100%; margin-top:50px" ng-click="proximo()" class="center-block btn btn-lg btn-primary">Próximo</button>
+          </div>
+
+          <div class="correct" ng-show="state == 'correct'">
+            <img style="width:80%" class="center-block" src="phpinga.png" alt="PHPinga">
+            <h1 class="text-center">Certa a resposta!</h1>
+            <p class="text-center">
+              Você acertou! Escolha alguém pra beber e passe a vez pra a pessoa à sua esquerda.
+            </p>
+            <button style="width:100%; margin-top:50px" ng-click="proximo()" class="center-block btn btn-lg btn-primary">Próximo</button>
+          </div>
+
+          <div class="pergunta" ng-show="state=='questions'">
+            <h3 class="text-center">{{perguntas[sequencia[contador]-1].pergunta}}</h3>
+            <div class="radio" ng-repeat="alt in perguntas[sequencia[contador] -1].alternativas track by $index">
+              <label><input value="{{$index}}" type="radio" name="question{{contador}}">{{alt}}</label>
+            </div>
+            <button style="width:100%; margin-top:50px" ng-click="responder()" class="center-block btn btn-lg btn-primary">Enviar</button>
+          </div>
+
+      </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
