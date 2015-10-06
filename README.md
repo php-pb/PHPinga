@@ -17,6 +17,6 @@ Para contribuir com perguntas e respostas basta fazer um fork e inserir suas per
 
 Rode o seguinte comando no terminal:
 
-    python -m SimpleHTTPServer
+    php -S localhost:8000
 
 Acesse [localhost:8000](http://localhost:8000).
