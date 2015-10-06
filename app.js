@@ -3,25 +3,9 @@ var app = angular.module('Pinga', []);
 app.factory('TrueRandomService', function($http) {
   return {
     getRand: function(number) {
+      var url =  encodeURIComponent('http://www.random.org/sequences/?num='+number+'&min=1&max='+(number)+'&col=1&replace=false&base=10&format=plain&rnd=new');
       return $http({
-        url: 'https://cors-anywhere.herokuapp.com/https://api.random.org/json-rpc/1/invoke',
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json-rpc'
-        },
-        data: {
-          'jsonrpc': '2.0',
-          'method': 'generateIntegers',
-          'params': {
-            'apiKey': 'd2319b89-8389-4d24-b1eb-4dbd80009153',
-            'n': number,
-            'min': 1,
-            'max': number,
-            'replacement': false,
-            'base': 10
-          },
-          'id': 27846
-        }
+        url: 'https://jsonp.afeld.me/?url='+url
       });
     }
   };
@@ -42,7 +26,9 @@ app.controller('MainController', ['$scope', '$http', 'TrueRandomService', functi
       return TrueRandomService.getRand($scope.perguntas.length);
     }).then(function(res) {
       $scope.contador = 0;
-      $scope.sequencia = res.data.result.random.data;
+      var seq = res.data.trim().split("\n");
+      $scope.sequencia = [];
+      for(var i in seq) $scope.sequencia.push(parseInt(seq[i]));
       $scope.state = 'questions';
     });
   };
