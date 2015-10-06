@@ -4,6 +4,11 @@
       "pergunta": "Qual das funcões pode ser usada para verificar se um número é inteiro?",
       "alternativas": ["int", "is_interger", "is_int", "isInt", "isInteger"],
       "correta": 2
+    },
+    {
+      "pergunta": "Qual método pode-se usar como construtor de uma classe?",
+      "alternativas": ["__construct()", "contruct__()", "__constructor()", "construtor__"],
+      "correta": 0
     }
   ]
 }
