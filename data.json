@@ -9,6 +9,11 @@
       "pergunta": "Qual método pode-se usar como construtor de uma classe?",
       "alternativas": ["__construct()", "contruct__()", "__constructor()", "construtor__"],
       "correta": 0
+    },
+    {
+      "pergunta": "Utilizando banco de dados MySQL, qual a função para enviar uma consulta SQL ao banco de dados ativo?",
+      "alternativas": ["mysql_fetch_array()", "mysql_stmt_start()", "mysql_fetch_array()", "mysql_query()"],
+      "correta": 3
     }
   ]
 }
