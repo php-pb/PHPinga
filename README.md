@@ -1,5 +1,7 @@
 # PHPinga
 
+[![Build Status](https://travis-ci.org/php-pb/PHPinga.svg)](https://travis-ci.org/php-pb/PHPinga)
+
 ![PHPinga](./phpinga.png)
 
 Um jogo de perguntas relacionadas a PHP.
