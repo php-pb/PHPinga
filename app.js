@@ -29,6 +29,11 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
       $scope.state = 'correct';
       $scope.respondidas.push($scope.perguntas[$scope.contador]);
       $scope.perguntas.splice($scope.contador, 1);
+      if ($scope.perguntas.length === 0) {
+        $scope.perguntas = $scope.respondidas;
+        $scope.respondidas = [];
+        $scope.state = 'end';
+      }
     } else {
       $scope.state = 'wrong';
     }
@@ -36,18 +41,14 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
   };
 
   $scope.proximo = function() {
-    if ($scope.perguntas.length === 0) {
-      $scope.perguntas = $scope.respondidas;
-      $scope.respondidas = [];
-    }
 
     $scope.contador = Math.floor(Math.random() * ($scope.perguntas.length - 0)) + 0;
-
     if($scope.contador == $scope.perguntas.length) {
       $scope.letTheGameBegin();
     } else {
       mostraPergunta();
     }
+
   };
 
   var startTimer = function() {

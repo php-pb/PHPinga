@@ -33,6 +33,15 @@
             <button style="width:100%; margin-top:50px" ng-click="letTheGameBegin()" class="center-block btn btn-lg btn-primary">Começar</button>
           </div>
 
+          <div class="end" ng-show="state == 'end'">
+            <img style="width:80%" class="center-block" src="phpinga.png" alt="PHPinga">
+            <h1 class="text-center">O jogo acabou!</h1>
+            <p class="text-center">
+              Não está bêbado suficiente? Clice em "Começar de novo"!
+            </p>
+            <button style="width:100%; margin-top:50px" ng-click="letTheGameBegin()" class="center-block btn btn-lg btn-primary">Começar de novo</button>
+          </div>
+
           <div class="wrong" ng-show="state == 'wrong'">
             <img style="width:80%" class="center-block" src="phpinga.png" alt="PHPinga">
             <h1 class="text-center">Bebe!</h1>
