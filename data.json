@@ -23,7 +23,7 @@
     {
       "pergunta": "Com relação as funções str_replace(), str_ireplace() e str_casereplace(), marque a alternativa correta?",
       "alternativas": [
-        "não há diferença entre elas", 
+        "Não há diferença entre elas", 
         "str_ireplace e str_casereplace não existem", 
         "str_ireplace e str_casereplace são para substituir caracteres em strings com case insensitive", 
         "str_ireplace é para substituir caracteres em strings com case insensitive e str_casereplace não existe"
@@ -31,14 +31,13 @@
       "correta": 3
     },
     {
-      "pergunta": "O que será impresso para echo '1 gato' + '2 cachorros'; ?",
+      "pergunta": "Qual é o resultado da variável $a, dado que $a = '1 gato' + '2 cachorros' == '3 mamíferos'; ?",
       "alternativas": [
-        "estoura uma exception", 
-        "3", 
-        "3 cachorros", 
-        "2 cachorros"
+        "false", 
+        "null", 
+        "true"
       ],
-      "correta": 1
+      "correta": 2
     }
   ]
 }
