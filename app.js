@@ -1,12 +1,15 @@
 var app = angular.module('Pinga', []);
 
 app.controller('MainController', ['$scope', '$http', function($scope, $http){
+
   $scope.state = 'welcome';
   $scope.perguntas = [];
   $scope.respondidas = [];
   $scope.contador = 0;
+  $scope.time = 0;
 
-  // Métodos
+  var timeout = 15
+    , timer;
 
   $scope.letTheGameBegin = function() {
     getPerguntas().then(function(response){
@@ -14,11 +17,12 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
       return Math.floor(Math.random() * ($scope.perguntas.length - 0)) + 0;
     }).then(function(res) {
       $scope.contador = 0;
-      $scope.state = 'questions';
+      mostraPergunta();
     });
   };
 
   $scope.responder = function() {
+    stopTimer();
     var resp = angular.element('input[type="radio"]:checked').val();
     if(resp == $scope.perguntas[$scope.contador].correta){
       $scope.state = 'correct';
@@ -41,8 +45,29 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
     if($scope.contador == $scope.perguntas.length) {
       $scope.letTheGameBegin();
     } else {
-      $scope.state = 'questions';
+      mostraPergunta();
     }
+  };
+
+  var startTimer = function() {
+    $scope.time = timeout;
+    timer = setInterval(function() {
+      $scope.time--;
+      if($scope.time == 0){
+        stopTimer();
+        $scope.state = 'wrong';
+      }
+      $scope.$apply();
+    }, 1000);
+  };
+
+  var stopTimer = function() {
+    clearInterval(timer);
+  };
+
+  var mostraPergunta = function() {
+    $scope.state = 'questions';
+    startTimer();
   };
 
   var getPerguntas = function() {

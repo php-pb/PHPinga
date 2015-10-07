@@ -56,6 +56,7 @@
             <div class="radio" ng-repeat="alt in perguntas[[contador]].alternativas track by $index">
               <label><input value="{{$index}}" type="radio" name="question{{contador}}">{{alt}}</label>
             </div>
+            <h2>Tempo restante: {{time}}</h2>
             <button style="width:100%; margin-top:50px" ng-click="responder()" class="center-block btn btn-lg btn-primary">Enviar</button>
           </div>
 
