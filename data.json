@@ -14,6 +14,30 @@
       "pergunta": "Utilizando banco de dados MySQL, qual a função para enviar uma consulta SQL ao banco de dados ativo?",
       "alternativas": ["mysql_free_result()", "mysql_stmt_start()", "mysql_fetch_array()", "mysql_query()"],
       "correta": 3
+    },
+    {
+      "pergunta": "Qual função compara duas strings de forma case insensitive?",
+      "alternativas": ["strcmp()", "str_cmp()", "strcasecmp()", "stricmp()"],
+      "correta": 2
+    },
+    {
+      "pergunta": "Com relação as funções str_replace(), str_ireplace() e str_casereplace(), marque a alternativa correta?",
+      "alternativas": [
+        "Não há diferença entre elas", 
+        "str_ireplace e str_casereplace não existem", 
+        "str_ireplace e str_casereplace são para substituir caracteres em strings com case insensitive", 
+        "str_ireplace é para substituir caracteres em strings com case insensitive e str_casereplace não existe"
+      ],
+      "correta": 3
+    },
+    {
+      "pergunta": "Qual é o resultado da variável $a, dado que $a = '1 gato' + '2 cachorros' == '3 mamíferos'; ?",
+      "alternativas": [
+        "false", 
+        "null", 
+        "true"
+      ],
+      "correta": 2
     }
   ]
 }
