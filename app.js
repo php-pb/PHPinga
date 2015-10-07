@@ -14,9 +14,7 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
   $scope.letTheGameBegin = function() {
     getPerguntas().then(function(response){
       $scope.perguntas = response.data.perguntas;
-      return Math.floor(Math.random() * ($scope.perguntas.length - 0)) + 0;
-    }).then(function(res) {
-      $scope.contador = 0;
+      $scope.contador = Math.floor(Math.random() * ($scope.perguntas.length - 0)) + 0;
       mostraPergunta();
     });
   };
