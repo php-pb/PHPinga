@@ -22,8 +22,9 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
   };
 
   $scope.responder = function() {
-    stopTimer();
+    if(angular.element('input[type="radio"]:checked').length === 0) return;
     var resp = angular.element('input[type="radio"]:checked').val();
+    stopTimer();
     if(resp == $scope.perguntas[$scope.contador].correta){
       $scope.state = 'correct';
       $scope.respondidas.push($scope.perguntas[$scope.contador]);
