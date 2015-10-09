@@ -11,7 +11,7 @@
       "correta": 2
     },
     {
-      "pergunta": "Quais são, respectivamente, os métodos mágicos chamados antes de serialize()?",
+      "pergunta": "Quais são, respectivamente, os métodos mágicos chamados antes de serialize() e depois de unserialize()?",
       "alternativas": [
         "__serialize() e __unserialize()",
         "__sleep() e __wakeup()",
