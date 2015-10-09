@@ -15,6 +15,7 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
     getPerguntas().then(function(response){
       $scope.perguntas = response.data.perguntas;
       $scope.contador = Math.floor(Math.random() * ($scope.perguntas.length - 0)) + 0;
+      timeout = $scope.perguntas[$scope.contador].time ? $scope.perguntas[$scope.contador] : timeout;
       mostraPergunta();
     });
   };
@@ -50,7 +51,11 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
   };
 
   var startTimer = function() {
-    $scope.time = timeout;
+    if (! $scope.perguntas[$scope.contador].tempo) {
+      $scope.time = timeout;
+    } else {
+      $scope.time = $scope.perguntas[$scope.contador].tempo;
+    }
     timer = setInterval(function() {
       $scope.time--;
       if($scope.time == 0){
