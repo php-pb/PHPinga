@@ -23,9 +23,9 @@
     {
       "pergunta": "Com relação as funções str_replace(), str_ireplace() e str_casereplace(), marque a alternativa correta?",
       "alternativas": [
-        "Não há diferença entre elas", 
-        "str_ireplace e str_casereplace não existem", 
-        "str_ireplace e str_casereplace são para substituir caracteres em strings com case insensitive", 
+        "Não há diferença entre elas",
+        "str_ireplace e str_casereplace não existem",
+        "str_ireplace e str_casereplace são para substituir caracteres em strings com case insensitive",
         "str_ireplace é para substituir caracteres em strings com case insensitive e str_casereplace não existe"
       ],
       "correta": 3
@@ -33,8 +33,8 @@
     {
       "pergunta": "Qual é o resultado da variável $a, dado que $a = '1 gato' + '2 cachorros' == '3 mamíferos'; ?",
       "alternativas": [
-        "false", 
-        "null", 
+        "false",
+        "null",
         "true"
       ],
       "correta": 2
@@ -78,6 +78,36 @@
         "Com PHP Global Databases"
       ],
       "correta": 1
+    },
+    {
+      "pergunta": "Indique o resultado da seguinte expressão: $var = '0'; echo empty($var) ? 'Vazio' : 'Tem conteúdo';",
+      "alternativas": [
+        "Dá erro: String to Integer convertion error",
+        "'Tem conteúdo'",
+        "'Vazio'",
+        "'0'"
+      ],
+      "correta": 2
+    },
+    {
+      "pergunta": "Indique o resultado da seguinte expressão: $var = '2015PHPinga'; echo $var == 2015 ? 'Igual' : 'Diferente';",
+      "alternativas": [
+        "Dá erro: String to Integer convertion error",
+        "'Igual'",
+        "'Diferente'",
+        "'2015PHPinga'"
+      ],
+      "correta": 1
+    },
+    {
+      "pergunta": "O que originalmente significava PHP antes de significar 'PHP: Hypertext Preprocessor'?",
+      "alternativas": [
+        "Personal Home Page",
+        "Preprocessor for Huge Parallelization",
+        "Packaged Hints for Programming",
+        "Program for High Problems"
+      ],
+      "correta": 0
     }
   ]
 }
