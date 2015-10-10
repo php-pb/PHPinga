@@ -38,6 +38,46 @@
         "true"
       ],
       "correta": 2
+    },
+    {
+      "pergunta": "Qual é o valor da variável $a, dado que $a = stristr('ElePHPant', 'p', true)",
+      "alternativas": ["PHP", "Ele", "ElePHPant", "php", "PHPAnt"],
+      "correta": 1
+    },
+    {
+      "pergunta": "Em qual versão o PHP ganhou uma API de hashing de senhas?",
+      "alternativas": [5.3, 5.4, 5.5, 5.6, 7],
+      "correta": 2
+    },
+    {
+      "pergunta": "Quais são, respectivamente, os métodos mágicos chamados antes de serialize() e depois de unserialize()?",
+      "alternativas": [
+        "__serialize() e __unserialize()",
+        "__sleep() e __wakeup()",
+        "__begin() e __end()",
+        "__construct() e __destruct()"
+      ],
+      "correta": 1
+    },
+    {
+      "pergunta": "O que a keyword 'final' faz?",
+      "alternativas": [
+        "Impede que uma classe ou método seja sobrescrito",
+        "Encerra o script PHP",
+        "Indica o final do programa",
+        "Nada, pois keyword 'final' não existe"
+      ],
+      "correta": 0
+    },
+    {
+      "pergunta": "Zivinho quer que seu sistema PHP funcione com qualquer banco de dados sem depender de funções específicas (como mysql_* para MySQL). Como ele pode fazer isso?",
+      "alternativas": [
+        "Não pode",
+        "Com PDO",
+        "Com ADODB",
+        "Com PHP Global Databases"
+      ],
+      "correta": 1
     }
   ]
 }
