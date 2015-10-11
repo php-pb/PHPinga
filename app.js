@@ -23,7 +23,7 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
     if(angular.element('input[type="radio"]:checked').length === 0) return;
     var resp = angular.element('input[type="radio"]:checked').val();
     stopTimer();
-    if(resp == $scope.perguntas[$scope.contador].correta){
+    if($scope.perguntas[$scope.contador].alternativas[resp].correta === true){
       $scope.state = 'correct';
       $scope.respondidas.push($scope.perguntas[$scope.contador]);
       $scope.perguntas.splice($scope.contador, 1);
@@ -39,22 +39,19 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
   };
 
   $scope.proximo = function() {
-
     $scope.contador = Math.floor(Math.random() * ($scope.perguntas.length - 0)) + 0;
+    $scope.perguntas[$scope.contador].alternativas = shuffleArray($scope.perguntas[$scope.contador].alternativas);
+
     if($scope.contador == $scope.perguntas.length) {
       $scope.letTheGameBegin();
     } else {
       mostraPergunta();
     }
-
   };
 
   var startTimer = function() {
-    if ($scope.perguntas[$scope.contador].tempo) {
-      $scope.time = $scope.perguntas[$scope.contador].tempo;
-    } else {
-      $scope.time = timeout;
-    }
+    $scope.time = $scope.perguntas[$scope.contador].tempo || timeout;
+
     timer = setInterval(function() {
       $scope.time--;
       if($scope.time == 0){
@@ -80,4 +77,18 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
       url: location.href + '/data.json'
     });
   };
+
+  var shuffleArray = function(array) {
+    var m = array.length, t, i;
+
+    while (m) {
+      i = Math.floor(Math.random() * m--);
+      t = array[m];
+      array[m] = array[i];
+      array[i] = t;
+    }
+
+    return array;
+  };
+
 }]);

@@ -2,112 +2,131 @@
   "perguntas": [
     {
       "pergunta": "Qual das funcões pode ser usada para verificar se um número é inteiro?",
-      "alternativas": ["int", "is_interger", "is_int", "isInt", "isInteger"],
-      "correta": 2
+      "alternativas": [
+        { "texto": "int" },
+        { "texto": "is_interger" },
+        { "texto": "is_int", "correta" : true },
+        { "texto": "isInt" },
+        { "texto": "isInteger" }
+      ]
     },
     {
       "pergunta": "Qual método pode-se usar como construtor de uma classe?",
-      "alternativas": ["__construct()", "contruct__()", "__constructor()", "construtor__"],
-      "correta": 0
+      "alternativas": [
+        { "texto": "__construct()", "correta" : true },
+        { "texto": "contruct__()" },
+        { "texto": "__constructor()" },
+        { "texto": "construtor__" }
+      ]
     },
     {
       "pergunta": "Utilizando banco de dados MySQL, qual a função para enviar uma consulta SQL ao banco de dados ativo?",
-      "alternativas": ["mysql_free_result()", "mysql_stmt_start()", "mysql_fetch_array()", "mysql_query()"],
-      "correta": 3
+      "alternativas": [
+        { "texto" : "mysql_free_result()" },
+        { "texto" : "mysql_stmt_start()" },
+        { "texto" : "mysql_fetch_array()" },
+        { "texto" : "mysql_query()","correta" : true }
+      ]
     },
     {
       "pergunta": "Qual função compara duas strings de forma case insensitive?",
-      "alternativas": ["strcmp()", "str_cmp()", "strcasecmp()", "stricmp()"],
-      "correta": 2
+      "alternativas": [
+        { "texto" : "strcmp()" },
+        { "texto" : "str_cmp()" },
+        { "texto" : "strcasecmp()", "correta" : true },
+        { "texto" : "stricmp()" }
+      ]
     },
     {
       "pergunta": "Com relação as funções str_replace(), str_ireplace() e str_casereplace(), marque a alternativa correta?",
       "alternativas": [
-        "Não há diferença entre elas",
-        "str_ireplace e str_casereplace não existem",
-        "str_ireplace e str_casereplace são para substituir caracteres em strings com case insensitive",
-        "str_ireplace é para substituir caracteres em strings com case insensitive e str_casereplace não existe"
-      ],
-      "correta": 3
+        { "texto" : "Não há diferença entre elas" },
+        { "texto" : "str_ireplace e str_casereplace não existem" },
+        { "texto" : "str_ireplace e str_casereplace são para substituir caracteres em strings com case insensitive" },
+        { "texto" : "str_ireplace é para substituir caracteres em strings com case insensitive e str_casereplace não existe", "correta" : true }
+      ]
     },
     {
       "pergunta": "Qual é o resultado da variável $a, dado que $a = '1 gato' + '2 cachorros' == '3 mamíferos'; ?",
       "alternativas": [
-        "false",
-        "null",
-        "true"
-      ],
-      "correta": 2
+        { "texto" : "false" },
+        { "texto" : "null" },
+        { "texto" : "true", "correta" : true }
+      ]
     },
     {
       "pergunta": "Qual é o valor da variável $a, dado que $a = stristr('ElePHPant', 'p', true)",
-      "alternativas": ["PHP", "Ele", "ElePHPant", "php", "PHPAnt"],
-      "correta": 1
+      "alternativas": [
+        { "texto" : "PHP" },
+        { "texto" : "Ele", "correta" : true },
+        { "texto" : "ElePHPant" },
+        { "texto" : "php" },
+        { "texto" : "PHPAnt" }
+      ]
     },
     {
       "pergunta": "Em qual versão o PHP ganhou uma API de hashing de senhas?",
-      "alternativas": [5.3, 5.4, 5.5, 5.6, 7],
-      "correta": 2
+      "alternativas": [
+        { "texto" : 5.3 },
+        { "texto" : 5.4 },
+        { "texto" : 5.5, "correta" : true },
+        { "texto" : 5.6 },
+        { "texto" : 7 }
+      ]
     },
     {
       "pergunta": "Quais são, respectivamente, os métodos mágicos chamados antes de serialize() e depois de unserialize()?",
       "alternativas": [
-        "__serialize() e __unserialize()",
-        "__sleep() e __wakeup()",
-        "__begin() e __end()",
-        "__construct() e __destruct()"
-      ],
-      "correta": 1
+        { "texto" : "__serialize() e __unserialize()" },
+        { "texto" : "__sleep() e __wakeup()", "correta" : true },
+        { "texto" : "__begin() e __end()" },
+        { "texto" : "__construct() e __destruct()" }
+      ]
     },
     {
       "pergunta": "O que a keyword 'final' faz?",
       "alternativas": [
-        "Impede que uma classe ou método seja sobrescrito",
-        "Encerra o script PHP",
-        "Indica o final do programa",
-        "Nada, pois keyword 'final' não existe"
-      ],
-      "correta": 0
+        { "texto" : "Impede que uma classe ou método seja sobrescrito", "correta" : true },
+        { "texto" : "Encerra o script PHP" },
+        { "texto" : "Indica o final do programa" },
+        { "texto" : "Nada, pois keyword 'final' não existe" }
+      ]
     },
     {
       "pergunta": "Zivinho quer que seu sistema PHP funcione com qualquer banco de dados sem depender de funções específicas (como mysql_* para MySQL). Como ele pode fazer isso?",
       "alternativas": [
-        "Não pode",
-        "Com PDO",
-        "Com ADODB",
-        "Com PHP Global Databases"
-      ],
-      "correta": 1
+        { "texto" : "Não pode" },
+        { "texto" : "Com PDO", "correta" : true },
+        { "texto" : "Com ADODB" },
+        { "texto" : "Com PHP Global Databases" }
+      ]
     },
     {
       "pergunta": "Indique o resultado da seguinte expressão: $var = '0'; echo empty($var) ? 'Vazio' : 'Tem conteúdo';",
       "alternativas": [
-        "Dá erro: String to Integer convertion error",
-        "'Tem conteúdo'",
-        "'Vazio'",
-        "'0'"
-      ],
-      "correta": 2
+        { "texto" : "Dá erro: String to Integer convertion error" },
+        { "texto" : "'Tem conteúdo'" },
+        { "texto" : "'Vazio'", "correta" : true },
+        { "texto" : "'0'" }
+      ]
     },
     {
       "pergunta": "Indique o resultado da seguinte expressão: $var = '2015PHPinga'; echo $var == 2015 ? 'Igual' : 'Diferente';",
       "alternativas": [
-        "Dá erro: String to Integer convertion error",
-        "'Igual'",
-        "'Diferente'",
-        "'2015PHPinga'"
-      ],
-      "correta": 1
+        { "texto" : "Dá erro: String to Integer convertion error" },
+        { "texto" : "'Igual'", "correta" : true },
+        { "texto" : "'Diferente'" },
+        { "texto" : "'2015PHPinga'" }
+      ]
     },
     {
       "pergunta": "O que originalmente significava PHP antes de significar 'PHP: Hypertext Preprocessor'?",
       "alternativas": [
-        "Personal Home Page",
-        "Preprocessor for Huge Parallelization",
-        "Packaged Hints for Programming",
-        "Program for High Problems"
-      ],
-      "correta": 0
+        { "texto" : "Personal Home Page", "correta" : true },
+        { "texto" : "Preprocessor for Huge Parallelization" },
+        { "texto" : "Packaged Hints for Programming" },
+        { "texto" : "Program for High Problems" }
+      ]
     }
   ]
 }
