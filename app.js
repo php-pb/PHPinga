@@ -50,7 +50,11 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
   };
 
   var startTimer = function() {
-    $scope.time = timeout;
+    if ($scope.perguntas[$scope.contador].tempo) {
+      $scope.time = $scope.perguntas[$scope.contador].tempo;
+    } else {
+      $scope.time = timeout;
+    }
     timer = setInterval(function() {
       $scope.time--;
       if($scope.time == 0){
