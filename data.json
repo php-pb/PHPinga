@@ -127,6 +127,15 @@
         { "texto" : "Packaged Hints for Programming" },
         { "texto" : "Program for High Problems" }
       ]
+    },
+    {
+     "pergunta" : "Escolha uma resposta incorreta",
+     "alternativas" : [
+       {"texto": " (1 | 2) == 1 "},
+       {"texto": " (1 ^ 3) == 2 ", "correta": true},
+       {"texto": " (2 ^ 3) == 8 "},
+       {"texto": " (2 & 3) == 6 "}
+     ]
     }
   ]
 }
