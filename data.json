@@ -108,6 +108,16 @@
         "Program for High Problems"
       ],
       "correta": 0
+    },
+    {
+       "pergunta" : "Escolha uma resposta incorreta", 
+       "alternativas" : [
+           " (1 | 2) == 1 ", 
+           " (1 ^ 3) == 2 ", 
+           " (2 ^ 3) == 8 ",
+           " (2 & 3) == 6 "
+       ],
+       "correta" : 1
     }
   ]
 }
