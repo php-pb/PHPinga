@@ -129,12 +129,12 @@
       ]
     },
     {
-     "pergunta" : "Escolha uma resposta incorreta",
+     "pergunta" : "Escolha a resposta correta",
      "alternativas" : [
-       {"texto": " `(1 | 2) == 1` ", "correta": true},
-       {"texto": " `(1 ^ 3) == 2` "},
-       {"texto": " `(2 ^ 3) == 8` ", "correta": true},
-       {"texto": " `(2 & 3) == 6` ", "correta": true}
+       {"texto": "`(1 | 2) == 1`" },
+       {"texto": "`(1 ^ 3) == 2`", "correta": true},
+       {"texto": "`(2 ^ 3) == 8`" },
+       {"texto": "`(2 & 3) == 6`" }
      ]
     }
   ]

@@ -13,7 +13,7 @@ Ao terminar, passa-se para o jogador da esquerda.
 
 ## Contribuindo
 
-Para contribuir com perguntas e respostas basta fazer um fork e inserir suas perguntas e respostas no arquivo `data.json`.
+Para contribuir com perguntas e respostas basta fazer um fork e inserir suas perguntas e respostas no arquivo `data.json`. As perguntas devem ser uma chance de acerto entre 20% e 50%.
 
 ### Rodando o app localmente
 
