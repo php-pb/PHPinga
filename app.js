@@ -8,7 +8,7 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
   $scope.contador = 0;
   $scope.time = 0;
 
-  var timeout = 15
+  var timeout = 30
     , timer;
 
   $scope.letTheGameBegin = function() {
