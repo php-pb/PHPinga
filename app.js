@@ -1,4 +1,9 @@
 var app = angular.module('Pinga', []);
+app.filter('to_trusted', ['$sce', function($sce) {
+  return function(text) {
+    return $sce.trustAsHtml(text);
+  };
+}]);
 
 app.controller('MainController', ['$scope', '$http', function($scope, $http){
 
@@ -13,7 +18,7 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
 
   $scope.letTheGameBegin = function() {
     getPerguntas().then(function(response){
-      $scope.perguntas = response.data.perguntas;
+      $scope.perguntas = processaPerguntas(response.data.perguntas);
       $scope.contador = Math.floor(Math.random() * ($scope.perguntas.length - 0)) + 0;
       mostraPergunta();
     });
@@ -47,6 +52,27 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
     } else {
       mostraPergunta();
     }
+  };
+
+  var processaTexto = function(str) {
+    str = markdown.toHTML(str+'');
+    str = str.replace('block<code>', '<pre><code>');
+    str = str.replace('</code>block', '</code></pre>');
+    return str;
+  }
+
+  var processaPerguntas = function(perguntas) {
+
+    var _final = [];
+    for(var i in perguntas) {
+      var pergunta = perguntas[i];
+      pergunta.pergunta = processaTexto(pergunta.pergunta);
+      for(var z in pergunta.alternativas) {
+        pergunta.alternativas[z].texto = processaTexto(pergunta.alternativas[z].texto);
+      }
+      _final.push(pergunta);
+    }
+    return _final;
   };
 
   var startTimer = function() {
