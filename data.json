@@ -3,59 +3,59 @@
     {
       "pergunta": "Qual das funcões pode ser usada para verificar se um número é inteiro?",
       "alternativas": [
-        { "texto": "int" },
-        { "texto": "is_interger" },
-        { "texto": "is_int", "correta" : true },
-        { "texto": "isInt" },
-        { "texto": "isInteger" }
+        { "texto": "`int`" },
+        { "texto": "`is_interger`" },
+        { "texto": "`is_int`", "correta" : true },
+        { "texto": "`isInt`" },
+        { "texto": "`isInteger`" }
       ]
     },
     {
       "pergunta": "Qual método pode-se usar como construtor de uma classe?",
       "alternativas": [
-        { "texto": "__construct()", "correta" : true },
-        { "texto": "contruct__()" },
-        { "texto": "__constructor()" },
-        { "texto": "construtor__" }
+        { "texto": "`__construct()`", "correta" : true },
+        { "texto": "`contruct__()`" },
+        { "texto": "`__constructor()`" },
+        { "texto": "`construtor__`" }
       ]
     },
     {
       "pergunta": "Utilizando banco de dados MySQL, qual a função para enviar uma consulta SQL ao banco de dados ativo?",
       "alternativas": [
-        { "texto" : "mysql_free_result()" },
-        { "texto" : "mysql_stmt_start()" },
-        { "texto" : "mysql_fetch_array()" },
-        { "texto" : "mysql_query()","correta" : true }
+        { "texto" : "`mysql_free_result()`" },
+        { "texto" : "`mysql_stmt_start()`" },
+        { "texto" : "`mysql_fetch_array()`" },
+        { "texto" : "`mysql_query()`","correta" : true }
       ]
     },
     {
       "pergunta": "Qual função compara duas strings de forma case insensitive?",
       "alternativas": [
-        { "texto" : "strcmp()" },
-        { "texto" : "str_cmp()" },
-        { "texto" : "strcasecmp()", "correta" : true },
-        { "texto" : "stricmp()" }
+        { "texto" : "`strcmp()`" },
+        { "texto" : "`str_cmp()`" },
+        { "texto" : "`strcasecmp()`", "correta" : true },
+        { "texto" : "`stricmp()`" }
       ]
     },
     {
-      "pergunta": "Com relação as funções str_replace(), str_ireplace() e str_casereplace(), marque a alternativa correta?",
+      "pergunta": "Com relação as funções `str_replace()`, `str_ireplace()` e `str_casereplace()`, marque a alternativa correta?",
       "alternativas": [
         { "texto" : "Não há diferença entre elas" },
-        { "texto" : "str_ireplace e str_casereplace não existem" },
-        { "texto" : "str_ireplace e str_casereplace são para substituir caracteres em strings com case insensitive" },
-        { "texto" : "str_ireplace é para substituir caracteres em strings com case insensitive e str_casereplace não existe", "correta" : true }
+        { "texto" : "`str_ireplace` e `str_casereplace` não existem" },
+        { "texto" : "`str_ireplace` e `str_casereplace` são para substituir caracteres em strings com case insensitive" },
+        { "texto" : "`str_ireplace` é para substituir caracteres em strings com case insensitive e `str_casereplace` não existe", "correta" : true }
       ]
     },
     {
-      "pergunta": "Qual é o resultado da variável $a, dado que $a = '1 gato' + '2 cachorros' == '3 mamíferos'; ?",
+      "pergunta": "Qual é o resultado da variável `$a`, dado que: \n\n`$a = '1 gato' + '2 cachorros' == '3 mamíferos';` ?",
       "alternativas": [
-        { "texto" : "false" },
-        { "texto" : "null" },
-        { "texto" : "true", "correta" : true }
+        { "texto" : "`false`" },
+        { "texto" : "`null`" },
+        { "texto" : "`true`", "correta" : true }
       ]
     },
     {
-      "pergunta": "Qual é o valor da variável $a, dado que $a = stristr('ElePHPant', 'p', true)",
+      "pergunta": "Qual é o valor da variável `$a`, dado que: \n\n`$a = stristr('ElePHPant', 'p', true)`",
       "alternativas": [
         { "texto" : "PHP" },
         { "texto" : "Ele", "correta" : true },
@@ -75,16 +75,16 @@
       ]
     },
     {
-      "pergunta": "Quais são, respectivamente, os métodos mágicos chamados antes de serialize() e depois de unserialize()?",
+      "pergunta": "Quais são, respectivamente, os métodos mágicos chamados antes de `serialize()` e depois de `unserialize()`?",
       "alternativas": [
-        { "texto" : "__serialize() e __unserialize()" },
-        { "texto" : "__sleep() e __wakeup()", "correta" : true },
-        { "texto" : "__begin() e __end()" },
-        { "texto" : "__construct() e __destruct()" }
+        { "texto" : "`__serialize()` e `__unserialize()`" },
+        { "texto" : "`__sleep()` e `__wakeup()`", "correta" : true },
+        { "texto" : "`__begin()` e `__end()`" },
+        { "texto" : "`__construct()` e `__destruct()`" }
       ]
     },
     {
-      "pergunta": "O que a keyword 'final' faz?",
+      "pergunta": "O que a keyword `final` faz?",
       "alternativas": [
         { "texto" : "Impede que uma classe ou método seja sobrescrito", "correta" : true },
         { "texto" : "Encerra o script PHP" },
@@ -102,21 +102,21 @@
       ]
     },
     {
-      "pergunta": "Indique o resultado da seguinte expressão: $var = '0'; echo empty($var) ? 'Vazio' : 'Tem conteúdo';",
+      "pergunta": "Indique o resultado da seguinte expressão: \n\n block```$var = '0'; echo empty($var) ? 'Vazio' : 'Tem conteúdo';```block",
       "alternativas": [
         { "texto" : "Dá erro: String to Integer convertion error" },
-        { "texto" : "'Tem conteúdo'" },
-        { "texto" : "'Vazio'", "correta" : true },
-        { "texto" : "'0'" }
+        { "texto" : "`'Tem conteúdo'`" },
+        { "texto" : "`'Vazio'`", "correta" : true },
+        { "texto" : "`'0'`" }
       ]
     },
     {
-      "pergunta": "Indique o resultado da seguinte expressão: $var = '2015PHPinga'; echo $var == 2015 ? 'Igual' : 'Diferente';",
+      "pergunta": "Indique o resultado da seguinte expressão: \n\n block```$var = '2015PHPinga'; echo $var == 2015 ? 'Igual' : 'Diferente';```block",
       "alternativas": [
         { "texto" : "Dá erro: String to Integer convertion error" },
-        { "texto" : "'Igual'", "correta" : true },
-        { "texto" : "'Diferente'" },
-        { "texto" : "'2015PHPinga'" }
+        { "texto" : "`'Igual'`", "correta" : true },
+        { "texto" : "`'Diferente'`" },
+        { "texto" : "`'2015PHPinga'`" }
       ]
     },
     {
@@ -131,10 +131,10 @@
     {
      "pergunta" : "Escolha uma resposta incorreta",
      "alternativas" : [
-       {"texto": " (1 | 2) == 1 ", "correta": true},
-       {"texto": " (1 ^ 3) == 2 "},
-       {"texto": " (2 ^ 3) == 8 ", "correta": true},
-       {"texto": " (2 & 3) == 6 ", "correta": true}
+       {"texto": " `(1 | 2) == 1` ", "correta": true},
+       {"texto": " `(1 ^ 3) == 2` "},
+       {"texto": " `(2 ^ 3) == 8` ", "correta": true},
+       {"texto": " `(2 & 3) == 6` ", "correta": true}
      ]
     }
   ]
