@@ -61,9 +61,11 @@
           </div>
 
           <div class="pergunta" ng-show="state=='questions'">
-            <h3 class="text-center">{{perguntas[[contador]].pergunta}}</h3>
+            <h4 style="padding-top:20px; padding-bottom:20px" ng-bind-html="perguntas[[contador]].pergunta | to_trusted"></h4>
             <div class="radio" ng-repeat="alternativa in perguntas[[contador]].alternativas track by $index">
-              <label><input value="{{$index}}" type="radio" name="question{{contador}}">{{alternativa.texto}}</label>
+              <label><input value="{{$index}}" type="radio" name="question{{contador}}">
+                <span ng-bind-html="alternativa.texto | to_trusted"></span>
+              </label>
             </div>
             <h2>Tempo restante: {{time}}</h2>
             <button style="width:100%; margin-top:50px" ng-click="responder()" class="center-block btn btn-lg btn-primary">Enviar</button>
@@ -75,6 +77,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-sanitize.js"></script>
+    <script src="assets/markdown.min.js"></script>
     <script src="app.js"></script>
 
     <script>
