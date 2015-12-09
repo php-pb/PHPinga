@@ -136,6 +136,34 @@
        {"texto": "`(2 ^ 3) == 8`" },
        {"texto": "`(2 & 3) == 6`" }
      ]
+    },
+    {
+     "pergunta" : "Dado the `strtolower()` é usado para aplicar lower case a strings, que função é usada para first case?",
+     "alternativas" : [
+       {"texto": "`strtofirst()`" },
+       {"texto": "`firstcharupper()`"},
+       {"texto": "`ucwords()`", "correta": true},
+       {"texto": "`firstcase()`"},
+       {"texto": "" }
+     ]
+    },
+    {
+      "pergunta": "Qual comando para iniciar o PHP em modo interativo (REPL - Read-Eval-Print-Delete loop)?",
+      "alternativas": [
+        {"texto": "`php --repl`"},
+        {"texto": "`php -a`", "correta": true},
+        {"texto": "`php -i`"},
+        {"texto": "`php -r`"}
+      ]
+    },
+    {
+      "pergunta": "Espaços após tags de fechamento (`?>`) ao final de um arquivo `*.php` costumam causar problemas em aplicações PHP. Por quê?",
+      "alternativas": [
+        {"texto": "Espaços após `?>` ocasionam erros de execução"},
+        {"texto": "Espaços após `?>` iniciam o envio de cabeçalhos da requisição"},
+        {"texto": "Espaços após `?>` iniciam o envio do corpo da requisição", "correta": true},
+        {"texto": "Espaços após `?>` encerram o envio do corpo da requisição"}
+      ]
     }
   ]
 }
