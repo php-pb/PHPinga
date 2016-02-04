@@ -138,13 +138,12 @@
      ]
     },
     {
-     "pergunta" : "Dado the `strtolower()` é usado para aplicar lower case a strings, que função é usada para first case?",
+     "pergunta" : "Dado que `strtolower()` é usado para aplicar lower case a strings, que função é usada para first case?",
      "alternativas" : [
        {"texto": "`strtofirst()`" },
        {"texto": "`firstcharupper()`"},
        {"texto": "`ucwords()`", "correta": true},
-       {"texto": "`firstcase()`"},
-       {"texto": "" }
+       {"texto": "`firstcase()`"}
      ]
     },
     {
