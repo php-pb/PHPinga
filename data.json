@@ -163,6 +163,15 @@
         {"texto": "Espaços após `?>` iniciam o envio do corpo da requisição", "correta": true},
         {"texto": "Espaços após `?>` encerram o envio do corpo da requisição"}
       ]
+    },
+    {
+      "pergunta": "Qual é o comando para verificar a sintaxe de um arquivo PHP?",
+      "alternativas": [
+        {"texto": "`php --check`"},
+        {"texto": "`php -c`"},
+        {"texto": "`php -l`", "correta": true},
+        {"texto": "`php -s`"}
+      ]
     }
   ]
 }
