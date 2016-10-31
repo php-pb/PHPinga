@@ -136,6 +136,15 @@
        {"texto": "`(2 ^ 3) == 8`" },
        {"texto": "`(2 & 3) == 6`" }
      ]
+    },
+       {
+      "pergunta": "Assinale a alternativa que representa tipos de variáveis escalares em PHP",
+      "alternativas": [
+        { "texto" : "Boolean, Null e Array" },
+        { "texto" : "Integer, Float e String", "correta" : true },
+        { "texto" : "Float, String e Array" },
+        { "texto" : "String, Boolean e Array" }
+      ]
     }
   ]
 }
