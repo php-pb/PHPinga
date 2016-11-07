@@ -163,6 +163,15 @@
         {"texto": "Espaços após `?>` iniciam o envio do corpo da requisição", "correta": true},
         {"texto": "Espaços após `?>` encerram o envio do corpo da requisição"}
       ]
-    }
+    },
+    {
++      "pergunta": "Assinale a alternativa que representa tipos de variáveis escalares em PHP",
++      "alternativas": [
++        { "texto" : "Boolean, Null e Array" },
++        { "texto" : "Integer, Float e String", "correta" : true },
++        { "texto" : "Float, String e Array" },
++        { "texto" : "String, Boolean e Array" }
++      ]
+     }
   ]
 }
